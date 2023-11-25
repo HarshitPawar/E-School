@@ -6,15 +6,15 @@
     <title>Student Dashboard - E-School</title>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-    	 // Find the form element and add a submit event listener
+    	 //submit button event listener
         var form = document.querySelector("form");
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent the default form submission
 
-            // Get the value entered in the roll number input field
+            // Reading roll number input field
             var rollNumber = document.getElementById("S_roll").value;
 
-            // Send an AJAX requsest to your servlet
+            // Send an AJAX requsest to profile servlet
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "profile", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -26,7 +26,7 @@
             };
             xhr.send("S_roll=" + rollNumber);
         });
-        // Handle button clicks
+        //vertical  navbar buttons event listener
         var profileButton = document.getElementById("profiledetails");
         var timetableButton = document.getElementById("viewtimetable");
         var assignmentButton = document.getElementById("viewassignment");
@@ -382,7 +382,6 @@ footer p{
     <iframe src="results/Harshit_CV.pdf" width="100%" height="500px"></iframe> 
     <br>
 </div>
-    <!-- Replace with your timetable file URL -->
 </body>
    <footer>
 	<section id="contact-us">
