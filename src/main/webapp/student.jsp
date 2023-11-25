@@ -129,9 +129,9 @@ body::before {
     height: 100%;
     background: url("study.jpg") no-repeat center center fixed;
     background-size: cover;
-    filter: blur(3px); /* Adjust the blur value as needed */
+    filter: blur(3px); 
     z-index: -1;
-    animation: transitionIn 0.75s; /* Ensure the pseudo-element is behind the content */
+    animation: transitionIn 0.75s;
 }
 .content img{
     margin-top: -762px;
@@ -182,14 +182,14 @@ body::before {
 }
 
 #detailsForm{
-    margin: 50px auto; /* Adjust margin as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 50px auto; 
+    width: 80%; 
+    max-width: 400px;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(85, 85, 85, 0.5); /* Adjust the color and transparency */
+    background-color: rgba(85, 85, 85, 0.5); 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White shadow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     color: white;
     text-align: center;
