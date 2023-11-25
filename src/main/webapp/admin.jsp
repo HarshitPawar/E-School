@@ -33,12 +33,12 @@
                 swal("Error!", "Error uploading timetable or scheduling.", "error");
             }
             function toggleForm(formId) {
-                // Hide all forms
+                // Hiding all the forms when a single form is selected.
                 document.querySelectorAll('.container').forEach(function(form) {
                     form.style.display = 'none';
                 });
 
-                // Show the selected form
+              
                 document.getElementById(formId).style.display = 'block';
             }
 
