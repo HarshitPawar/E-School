@@ -435,7 +435,7 @@ footer p{
         // submit button event listener
         var form = document.querySelector("form");
         form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault(); // Preventing the default form submission
 
             // reads roll number input field
             var name = document.getElementById("studentNameFilter").value;
