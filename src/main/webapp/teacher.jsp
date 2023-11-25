@@ -58,7 +58,7 @@ body {
 }
 
 .content {
-    margin-left: 243px; /* Adjust the width of the navbar */
+    margin-left: 243px; 
     padding: 20px;
 }
 
@@ -71,10 +71,10 @@ body::before {
     height: 100%;
     background: url("blackboard.jpg") no-repeat center center fixed;
     background-size: cover;
-    filter: blur(3px); /* Adjust the blur value as needed */
+    filter: blur(3px);
     z-index: -1;
     animation: transitionIn 0.75s; }
-    /* Ensure the pseudo-element is behind the content */
+   
 .content img{
     margin-top: 98px;
     width: 135px;
@@ -133,60 +133,60 @@ form{
 #filterstudent {
     margin: 5px auto;
     margin-left: 43%; 
-    animation: transitionIn 0.75s;/* Center the container horizontally and set a small top margin */
+    animation: transitionIn 0.75s;
 }
 #studentData{
     margin-left: -71px;
-    margin-right: 20px; /* Adjust margin as needed */
-    width: 160%; /* Take up the full width of its container */
-    max-width: 600px; /* Adjust the maximum width as needed */
+    margin-right: 20px; 
+    width: 160%; 
+    max-width: 600px;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(85, 85, 85, 0.5); /* Adjust the color and transparency */
+    background-color: rgba(85, 85, 85, 0.5); 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White shadow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
     box-sizing: border-box;
     color: white;
     text-align: left;
     animation: transitionIn 0.75s;
 }
 #up_attendance{
-    margin: 50px auto; /* Adjust margin as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 50px auto; 
+    width: 80%; 
+    max-width: 400px; 
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(85, 85, 85, 0.5); /* Adjust the color and transparency */
+    background-color: rgba(85, 85, 85, 0.5); 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White shadow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
     box-sizing: border-box;
     color: white;
     text-align: center;
     animation: transitionIn 0.75s;
 }
 #up_assignment{
-    margin: 50px auto; /* Adjust margin as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 50px auto;
+    width: 80%; 
+    max-width: 400px; 
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(85, 85, 85, 0.5); /* Adjust the color and transparency */
+    background-color: rgba(85, 85, 85, 0.5); 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White shadow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
     box-sizing: border-box;
     color: white;
     text-align: center;
     animation: transitionIn 0.75s;
 }
 #up_result{
-    margin: 50px auto; /* Adjust margin as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 50px auto;
+    width: 80%; 
+    max-width: 400px; 
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(85, 85, 85, 0.5); /* Adjust the color and transparency */
+    background-color: rgba(85, 85, 85, 0.5);
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* White shadow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); \
     box-sizing: border-box;
     color: white;
     text-align: center;
@@ -194,7 +194,7 @@ form{
 }
 
 
-/* Ensure that there is no border or padding on the body or other elements */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -420,33 +420,33 @@ footer p{
 	    </form>
     </div>
     
-    <!-- Rest of your HTML code for uploading attendance, assignment, and result -->
+    
     
 </body>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        // Function to hide all forms
+        //hide all forms at first
         function hideAllForms() {
             document.querySelectorAll('.container').forEach(function (form) {
                 form.style.display = 'none';
             });
         }
 
-        // Find the form element and add a submit event listener
+        // submit button event listener
         var form = document.querySelector("form");
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent the default form submission
 
-            // Get the value entered in the roll number input field
+            // reads roll number input field
             var name = document.getElementById("studentNameFilter").value;
 
-            // Send an AJAX request to your servlet
+            // Send an AJAX request to your filter student servlet
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "filter_student", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Update the output container with the response from the servlet
+                    
                     document.getElementById("studentData").innerHTML = xhr.responseText;
                 }
             };
@@ -473,7 +473,7 @@ footer p{
             swal("Error!", "Error uploading Result.", "error");
         }
 
-        // Function to hide all forms
+        //hiding all forms
         function hideAllForms() {
             document.getElementById('filterstudent').style.display = 'none';
             document.getElementById('up_attendance').style.display = 'none';
@@ -481,9 +481,9 @@ footer p{
             document.getElementById('up_result').style.display = 'none';
         }
 
-        // Rest of your code...
+   
 
-        // Add event listeners to navbar buttons
+        //event listeners to navbar buttons
         document.getElementById('studentsBtn').addEventListener('click', function () {
             hideAllForms();
             document.getElementById('filterstudent').style.display = 'block';
