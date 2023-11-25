@@ -119,9 +119,9 @@ body::before {
     height: 100%;
     background: url("papers.jpg") no-repeat center center fixed;
     background-size: cover;
-    filter: blur(3px); /* Adjust the blur value as needed */
+    filter: blur(3px); 
     z-index: -1;
-    animation: transitionIn 0.75s; /* Ensure the pseudo-element is behind the content */
+    animation: transitionIn 0.75s;
 }
 .content img{
     margin-top: -684px;
@@ -254,7 +254,7 @@ input[type="submit"]:hover {
 }
 footer section{	
     margin-top: 55%;
-	transform: translate(0%, 13%);
+    transform: translate(0%, 13%);
     top: 50%;
     left: 50%;
     text-align: center;
