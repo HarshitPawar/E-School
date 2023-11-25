@@ -9,7 +9,7 @@
     	 //submit button event listener
         var form = document.querySelector("form");
         form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault(); // Preventing the default form submission
 
             // Reading roll number input field
             var rollNumber = document.getElementById("S_roll").value;
