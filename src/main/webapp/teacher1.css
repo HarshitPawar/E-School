@@ -1,0 +1,170 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 720px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 107px 70px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    animation: transitionIn 0.75s;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("blackboard.jpg") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(3px); /* Adjust the blur value as needed */
+    z-index: -1;
+    animation: transitionIn 0.75s; /* Ensure the pseudo-element is behind the content */
+
+
+img{
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    margin-top: 33px;
+    padding: 10px 40px;
+    animation: transitionIn 0.75s;
+
+}
+form{
+    margin-bottom: 31px;
+}
+h1 {
+    text-align: center;
+    border: #ffb300;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 8x;
+
+}
+
+h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    font-size: 20px;
+      
+}
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    color: #fff;
+    padding-left: 53px;
+
+
+}
+.container {
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    height: 20vh;
+}
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgb(74, 73, 73); 
+    animation: transitionIn 0.75s;
+    margin-bottom: 48px;
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333; 
+    color: #fff;
+}
+input[type="text"]{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #451abc;
+    color: #fff;
+    width: 150px;
+    cursor: pointer;
+    margin-left: 58px;
+   
+}
+
+input[type="text"] {
+    width: 35%;
+    display: inline-block;
+}
+
+button {
+    width: 35%;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b0b0b;
+}
+
+input[type="submit"]:hover {
+    background-color: #250e70; 
+}
+input[type="file"]{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    display: inline-block;
+    padding-left: 113px;
+}
+@keyframes transitionIn{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
